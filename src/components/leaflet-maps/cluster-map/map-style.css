@@ -1,0 +1,60 @@
+/*
+https://github.com/Leaflet/Leaflet.markercluster/blob/master/dist/MarkerCluster.Default.css
+*/
+
+.cluster-icon-container {
+    width: 100%;
+    height: 100%;
+    padding: 6px;
+    border-radius: 50%;
+    margin: 0;
+    color: whitesmoke;
+}
+
+.marker-cluster-icon {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+    /* border-width: 6px; */
+    /* border-style: solid; */
+
+    font-size: 1.5rem;
+    transition: all .2s ease-out;
+}
+
+.marker-cluster-icon:hover {
+    transform: scale(1.3);
+    text-shadow: 0 0 5px white;
+    color: whitesmoke;
+    z-index: 99999;
+}
+
+:root {
+    --color-category-operation-light: #8474E9BB;
+    --color-category-upstream-light: #FFA06ABB;
+    --color-category-downstream-light: #80D977BB;
+    --color-category-cluster-light: #515F66BB;
+}
+
+.marker-cluster-category-operation {
+    background: var(--color-category-operation-light);
+}
+
+.marker-cluster-category-upstream {
+    background: var(--color-category-upstream-light);
+}
+
+.marker-cluster-category-downstream {
+    background: var(--color-category-downstream-light);
+}
+
+.marker-cluster-category-cluster {
+    background: var(--color-category-cluster-light);
+}

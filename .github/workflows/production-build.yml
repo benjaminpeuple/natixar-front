@@ -1,0 +1,20 @@
+name: Building Natixar Frontend for Production
+run-name: ${{ github.actor }} is building for production! 🚀
+on: [push]
+jobs:
+  ProdBuild:
+    strategy:
+      matrix:
+        node-version: ['21.x']
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: Install dependencies
+      run: npm ci
+    - name: Build
+      run: npm run build
